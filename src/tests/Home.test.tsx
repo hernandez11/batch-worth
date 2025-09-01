@@ -3,8 +3,9 @@ import { render, screen } from '@testing-library/react'
 import { Home } from '../components/Home'
 
 describe('Home', () => {
-  it('Displays dashboard and tabs', () => {
+  it('Displays Title', () => {
     render(<Home />)
-    // TODO
+
+    expect(screen.getByTestId('title')).toBeInTheDocument()
   })
 })

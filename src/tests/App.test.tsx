@@ -9,8 +9,11 @@ vi.mock('../components/Home', () => ({
 
 describe('App', () => {
   it('Displays home page', () => {
+    const mockHome = vi.fn()
+    vi.mocked(Home).mockImplementation(mockHome)
+
     render(<App />)
 
-    expect(Home).toHaveBeenCalledOnce()
+    expect(mockHome).toHaveBeenCalledOnce()
   })
 })

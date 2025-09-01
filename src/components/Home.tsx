@@ -1,3 +1,3 @@
 export const Home = () => {
-  return <p>hello world</p>
+  return <p data-testid="title">hello world</p>
 }
