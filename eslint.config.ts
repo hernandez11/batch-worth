@@ -16,16 +16,21 @@ export default defineConfig([
   pluginReact.configs.flat.recommended,
   eslintPluginPrettier,
   {
+    settings: {
+      react: {
+        version: 'detect', // Automatically picks the React version
+      },
+    },
     rules: {
       'no-duplicate-imports': 'warn',
       'no-use-before-define': 'warn',
       'no-useless-assignment': 'warn',
-      'require-atomoic-updates': 'warn',
+      'require-atomic-updates': 'warn',
       'block-scoped-var': 'warn',
       'no-empty-function': 'warn',
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'no-unused-vars': 'warn',
       'no-undef': 'warn',
+      'react/react-in-jsx-scope': 'off',
     },
   },
 ])
