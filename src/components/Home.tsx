@@ -1,3 +1,16 @@
+import { Dashboard } from './Dashboard'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
+
 export const Home = () => {
-  return <p data-testid="title">hello world</p>
+  return (
+    <>
+      <Tabs data-testid={'VerticalTabs'}>
+        <Tab></Tab>
+      </Tabs>
+      <div>
+        <Dashboard />
+      </div>
+    </>
+  )
 }
