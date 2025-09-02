@@ -14,7 +14,12 @@ describe('Home', () => {
 
     render(<Home />)
 
-    expect(mockDashboard).toHaveBeenCalledOnce()
     expect(screen.getByTestId('VerticalTabs')).toBeInTheDocument()
+    expect(screen.getByTestId('Dashboard')).toBeInTheDocument()
+    expect(screen.getByTestId('Ingredients')).toBeInTheDocument()
+    expect(screen.getByTestId('Recipes')).toBeInTheDocument()
+    expect(screen.getByTestId('Batch-calculator')).toBeInTheDocument()
+
+    expect(mockDashboard).toHaveBeenCalledOnce()
   })
 })
