@@ -8,7 +8,7 @@ import { useState } from 'react'
 export const Home = () => {
   const [selectedTab, setSelectedTab] = useState('Dashboard')
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (newValue: string) => {
     setSelectedTab(newValue)
   }
 
@@ -19,7 +19,7 @@ export const Home = () => {
         orientation="vertical"
         variant="scrollable"
         value={selectedTab}
-        onChange={handleChange}
+        onChange={() => handleChange}
       >
         <Tab value="Dashboard" label="Dashboard"></Tab>
         <Tab value="Ingredients" label="Ingredients"></Tab>
