@@ -19,25 +19,19 @@ export const Home = () => {
         orientation="vertical"
         variant="scrollable"
         value={selectedTab}
-        onChange={() => handleChange}
+        onChange={(_, newValue) => handleChange(newValue)}
       >
-        <Tab value="Dashboard" label="Dashboard"></Tab>
-        <Tab value="Ingredients" label="Ingredients"></Tab>
-        <Tab value="Recipes" label="Recipes"></Tab>
-        <Tab value="Calculator" label="Batch calculator"></Tab>
+        <Tab value="Dashboard" label="Dashboard" data-testid={'Dashboard'}></Tab>
+        <Tab value="Ingredients" label="Ingredients" data-testid={'Ingredients'}></Tab>
+        <Tab value="Recipes" label="Recipes" data-testid={'Recipes'}></Tab>
+        <Tab value="Calculator" label="Batch calculator" data-testid={'Batch-calculator'}></Tab>
       </Tabs>
-      <TabPanel value={'Dashboard'} data-testid={'Dashboard'}>
+      <TabPanel value={'Dashboard'}>
         <Dashboard />
       </TabPanel>
-      <TabPanel value={'Ingredients'} data-testid={'Ingredients'}>
-        Ingredients
-      </TabPanel>
-      <TabPanel value={'Recipes'} data-testid={'Recipes'}>
-        Recipes
-      </TabPanel>
-      <TabPanel value={'Calculator'} data-testid={'Batch-calculator'}>
-        Batch calculator
-      </TabPanel>
+      <TabPanel value={'Ingredients'}>Ingredients</TabPanel>
+      <TabPanel value={'Recipes'}>Recipes</TabPanel>
+      <TabPanel value={'Calculator'}>Batch calculator</TabPanel>
     </TabContext>
   )
 }
