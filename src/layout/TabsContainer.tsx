@@ -3,7 +3,7 @@ import Tab from '@mui/material/Tab'
 import TabPanel from '@mui/lab/TabPanel'
 import TabContext from '@mui/lab/TabContext'
 import { useState } from 'react'
-import Dashboard from '../tabs/Dashboard'
+import Dashboard from './tabs/Dashboard'
 
 export default function TabsContainer() {
   const [selectedTab, setSelectedTab] = useState('Dashboard')
