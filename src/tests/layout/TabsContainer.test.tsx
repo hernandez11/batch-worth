@@ -19,7 +19,7 @@ describe('TabsContainer', () => {
   })
 
   it.each([['IngredientsTab'], ['RecipesTab'], ['CalculatorTab']])(
-    'Renders selected %s tab on click',
+    'Renders selected %s on click',
     async (testId: string) => {
       render(<TabsContainer />)
 
