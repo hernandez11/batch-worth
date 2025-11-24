@@ -1,10 +1,10 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { render } from '@testing-library/react'
-import { TabsContainer } from '../layout/TabsContainer'
+import TabsContainer from '../layout/TabsContainer'
 import App from '../App'
 
 vi.mock('../layout/TabsContainer', () => ({
-  TabsContainer: vi.fn(),
+  default: vi.fn(),
 }))
 
 describe('App', () => {
