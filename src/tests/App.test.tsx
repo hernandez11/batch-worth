@@ -1,19 +1,20 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, afterEach } from 'vitest'
 import { render } from '@testing-library/react'
-import { Home } from '../components/Home'
+import { TabsContainer } from '../layout/TabsContainer'
 import App from '../App'
 
-vi.mock('../components/Home', () => ({
-  Home: vi.fn(),
+vi.mock('../layout/TabsContainer', () => ({
+  TabsContainer: vi.fn(),
 }))
 
 describe('App', () => {
-  it('Displays home page', () => {
-    const mockHome = vi.fn()
-    vi.mocked(Home).mockImplementation(mockHome)
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
 
+  it('Displays TabsContainer', () => {
     render(<App />)
 
-    expect(mockHome).toHaveBeenCalledOnce()
+    expect(TabsContainer).toHaveBeenCalledTimes(1)
   })
 })

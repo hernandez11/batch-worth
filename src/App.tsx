@@ -1,8 +1,6 @@
 import './App.css'
-import { Home } from './components/Home'
+import { TabsContainer } from './layout/TabsContainer'
 
-function App() {
-  return <Home />
+export default function App() {
+  return <TabsContainer />
 }
-
-export default App
