@@ -20,10 +20,6 @@ export const StyledTabs = styled(Tabs)`
       color: #e38a8c;
       background-color: #741912;
       border-radius: 10px;
-
-      &:hover {
-        color: #f3ecd8;
-      }
     }
   }
 
