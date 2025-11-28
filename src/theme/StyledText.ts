@@ -4,7 +4,9 @@ export const StyledPrimaryHeader = styled.header`
   color: #e38a8c;
   font-size: 8em;
   letter-spacing: -5px;
-  line-height: 50px;
+  line-height: 100px;
+  background-color: white;
+  white-space: nowrap;
 `
 
 export const StyledSubheader = styled.h3`

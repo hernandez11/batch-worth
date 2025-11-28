@@ -1,0 +1,26 @@
+.dashboardHeaderContainer {
+  display: flex;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  > img {
+    margin-top: -85px;
+    width: 120%;
+    object-fit: contain;
+  }
+}
