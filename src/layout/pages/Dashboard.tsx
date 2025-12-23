@@ -1,7 +1,7 @@
 import { StyledContentWrapper } from '../../theme/StyledContentWrapper'
 import { StyledPrimaryHeader, StyledSubheader } from '../../theme/StyledText'
 
-export default function Dashboard() {
+export const Dashboard = () => {
   return (
     <StyledContentWrapper>
       <div className="titleWrapper">
