@@ -1,0 +1,6 @@
+{
+  "name": "batch-worth",
+  "compatibility_date": "2025-12-23",
+  "main": "src/worker.ts",
+  "assets": { "directory": "./dist" },
+}
