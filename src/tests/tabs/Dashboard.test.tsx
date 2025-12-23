@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import Dashboard from '../../layout/tabs/Dashboard'
+import { Dashboard } from '../../layout/pages/Dashboard'
 
 describe('Dashboard', () => {
   it('Renders default elements', () => {

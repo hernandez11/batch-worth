@@ -3,9 +3,9 @@ import TabContext from '@mui/lab/TabContext'
 import { useState } from 'react'
 import { StyledTabs } from '../theme/Tabs/StyledTabs'
 import { StyledTabPanel } from '../theme/Tabs/StyledTabPanel'
-import Dashboard from './pages/Dashboard'
+import { Dashboard } from './pages/Dashboard'
 
-export default function TabsContainer() {
+export const TabsContainer = () => {
   const [selectedTab, setSelectedTab] = useState('Dashboard')
 
   const handleChange = (newValue: string) => {
