@@ -2,7 +2,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import TabsContainer from '../../layout/TabsContainer'
 import userEvent from '@testing-library/user-event'
-import Dashboard from '../../layout/tabs/Dashboard'
+import Dashboard from '../../layout/pages/Dashboard'
 
 vi.mock('../../layout/tabs/Dashboard', () => ({
   default: vi.fn(),
