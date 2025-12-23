@@ -1,9 +1,9 @@
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import { useState } from 'react'
-// import Dashboard from './tabs/Dashboard'
 import { StyledTabs } from '../theme/Tabs/StyledTabs'
 import { StyledTabPanel } from '../theme/Tabs/StyledTabPanel'
+import Dashboard from './pages/Dashboard'
 
 export default function TabsContainer() {
   const [selectedTab, setSelectedTab] = useState('Dashboard')
@@ -20,7 +20,7 @@ export default function TabsContainer() {
         <Tab value="Recipes" label="Recipes" data-testid={'RecipesTab'}></Tab>
         <Tab value="Calculator" label="Batch calculator" data-testid={'CalculatorTab'}></Tab>
       </StyledTabs>
-      <StyledTabPanel value={'Dashboard'}>{/* <Dashboard /> */}</StyledTabPanel>
+      <StyledTabPanel value={'Dashboard'}>{<Dashboard />}</StyledTabPanel>
       <StyledTabPanel value={'Ingredients'}>Ingredients</StyledTabPanel>
       <StyledTabPanel value={'Recipes'}>Recipes</StyledTabPanel>
       <StyledTabPanel value={'Calculator'}>Batch calculator</StyledTabPanel>

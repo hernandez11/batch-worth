@@ -4,7 +4,7 @@ import TabsContainer from '../../layout/TabsContainer'
 import userEvent from '@testing-library/user-event'
 import Dashboard from '../../layout/pages/Dashboard'
 
-vi.mock('../../layout/tabs/Dashboard', () => ({
+vi.mock('../../layout/pages/Dashboard', () => ({
   default: vi.fn(),
 }))
 
