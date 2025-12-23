@@ -2,21 +2,23 @@ import styled from 'styled-components'
 import Tabs from '@mui/material/Tabs'
 
 export const StyledTabs = styled(Tabs)`
-  .MuiTab-root {
-    font-size: clamp(0.6rem, 1.2vw, 1rem);
-    min-height: 45px;
-    min-width: 10em;
-    z-index: 1;
-    margin-top: 1rem;
+  background-color: #f3ecd8;
+  border-radius: 10px;
+  width: fit-content;
+  margin-top: 1rem;
+  margin-left: 1rem;
 
+  .MuiTab-root {
+    z-index: 1;
+    font-size: clamp(0.6rem, 1.2vw, 1rem);
+    min-height: 48px;
+    min-width: 10em;
     color: #741912;
-    background-color: #f3ecd8;
     text-transform: none;
 
     &:first-of-type {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
-      margin-left: 1rem;
     }
 
     &:last-of-type {
