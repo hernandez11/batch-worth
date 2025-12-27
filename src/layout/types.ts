@@ -3,7 +3,6 @@ export type Supplies = {
   name: string
   unit: unit
   costPerUnitCents: number | undefined
-  usedInProducts: ProductRef[] //products this supply is used in
 }
 
 export type SuppliesUsed = {
