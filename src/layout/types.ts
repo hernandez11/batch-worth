@@ -3,6 +3,7 @@ export type Supplies = {
   name: string
   unit: unit
   costPerUnitCents: number | undefined
+  createdAt: string
 }
 
 export type SuppliesUsed = {
@@ -22,6 +23,7 @@ export type Product = {
   name: string
   description: string | null
   image: string | null
+  createdAt: string
   usedSupplies: SuppliesUsed[] //supplies used in this product
   totalCostCents: number //total cost in cents to produce product
 }
