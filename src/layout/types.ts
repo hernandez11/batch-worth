@@ -1,7 +1,7 @@
 export type Supplies = {
   id: string
   name: string
-  unit: unit
+  unit: Unit
   costPerUnitCents: number | undefined
   createdAt: string
 }
@@ -9,7 +9,7 @@ export type Supplies = {
 export type SuppliesUsed = {
   id: string
   name: string
-  unit: unit
+  unit: Unit
   quantityUsed: number | undefined
 }
 
@@ -28,4 +28,4 @@ export type Product = {
   totalCostCents: number //total cost in cents to produce product
 }
 
-export type unit = 'tsp' | 'tbsp' | 'cups' | 'floz' | 'oz' | 'g' | 'ml' | 'each'
+export type Unit = 'tsp' | 'tbsp' | 'cups' | 'floz' | 'oz' | 'g' | 'ml' | 'each'

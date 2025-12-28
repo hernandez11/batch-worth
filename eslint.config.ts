@@ -10,7 +10,7 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     plugins: { js },
     extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser },
+    languageOptions: { globals: globals.browser }
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
@@ -18,8 +18,8 @@ export default defineConfig([
   {
     settings: {
       react: {
-        version: 'detect', // Automatically picks the React version
-      },
+        version: 'detect'
+      }
     },
     rules: {
       'no-duplicate-imports': 'warn',
@@ -31,6 +31,7 @@ export default defineConfig([
       'no-unused-vars': 'warn',
       'no-undef': 'warn',
       'react/react-in-jsx-scope': 'off',
-    },
-  },
+      'prettier/prettier': ['error', { trailingComma: 'none' }]
+    }
+  }
 ])
