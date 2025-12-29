@@ -1,37 +1,18 @@
 import axios from 'axios'
-import { Supplies, Unit, SuppliesUsed } from '../layout/types'
+import { Unit, Product } from '../layout/types'
 
-type createSupplyResponse = {
-  id: string
-  name: string
-  description: string | null
-  image: string | null
-  createdAt: string
-  usedSupplies: SuppliesUsed[]
-  totalCostCents: number
-}
+type CreateSupplyResponse = Product
 
-type createSupplyRequest = {
+type CreateSupplyRequest = {
   name: string
   unit: Unit
   costPerUnitCents?: number
 }
 
-export const createSupply = async ({
-  name,
-  unit,
-  costPerUnitCents
-}: createSupplyRequest): Promise<createSupplyResponse> => {
-  const { data } = await axios.post('/api/supplies', {
-    name,
-    unit,
-    costPerUnitCents: costPerUnitCents ?? 0
-  })
+export const createSupply = async (
+  createSupplyRequest: CreateSupplyRequest
+): Promise<CreateSupplyResponse> => {
+  const { data } = await axios.post('/api/supplies', createSupplyRequest)
 
-  return data
-}
-
-export const getSupplies = async (): Promise<Supplies[]> => {
-  const { data } = await axios.get<Supplies[]>('/api/supplies')
   return data
 }

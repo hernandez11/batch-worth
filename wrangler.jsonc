@@ -17,5 +17,12 @@
       "persist": true,
       "head_sampling_rate": 1
     }
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "batch_worth_db",
+      "database_id": "1a25b642-324d-43e3-b05c-1c55119d2a1a"
+    }
+  ]
 }
