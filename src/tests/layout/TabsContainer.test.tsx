@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 import { Dashboard } from '../../layout/pages/Dashboard'
 
 vi.mock('../../layout/pages/Dashboard', () => ({
-  default: vi.fn(),
+  default: vi.fn()
 }))
 
 describe('TabsContainer', () => {
@@ -39,6 +39,6 @@ describe('TabsContainer', () => {
       expect(tab).toHaveAttribute('aria-selected', 'false')
       await userEvent.click(tab)
       expect(tab).toHaveAttribute('aria-selected', 'true')
-    },
+    }
   )
 })

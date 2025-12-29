@@ -4,7 +4,7 @@ import { TabsContainer } from '../layout/TabsContainer'
 import App from '../App'
 
 vi.mock('../layout/TabsContainer', () => ({
-  default: vi.fn(),
+  default: vi.fn()
 }))
 
 describe('App', () => {
