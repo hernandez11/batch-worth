@@ -18,6 +18,15 @@ export default {
       return new Response('worker-version-1', { status: 200 })
     }
 
+    if (url.pathname === '/api/db-ping') {
+      if (!env?.DB) return new Response('DB binding missing', { status: 500 })
+
+      const result = await env.DB.prepare('SELECT 1 as ok').first()
+      return new Response(JSON.stringify(result), {
+        headers: { 'content-type': 'application/json' }
+      })
+    }
+
     // ✅ TEST: create a supply row
     if (request.method === 'POST' && url.pathname === '/api/supplies') {
       const body = await request.json().catch(() => null)
