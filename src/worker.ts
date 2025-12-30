@@ -27,6 +27,16 @@ export default {
       })
     }
 
+    if (url.pathname === '/api/db-schema') {
+      const rows = await env.DB.prepare(
+        "SELECT name, sql FROM sqlite_master WHERE type='table' ORDER BY name;"
+      ).all()
+
+      return new Response(JSON.stringify(rows.results), {
+        headers: { 'content-type': 'application/json' }
+      })
+    }
+
     // ✅ TEST: create a supply row
     if (request.method === 'POST' && url.pathname === '/api/supplies') {
       const body = await request.json().catch(() => null)
