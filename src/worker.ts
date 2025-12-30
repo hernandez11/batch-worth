@@ -14,6 +14,10 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url)
 
+    if (url.pathname === '/api/version') {
+      return new Response('worker-version-1', { status: 200 })
+    }
+
     // ✅ TEST: create a supply row
     if (request.method === 'POST' && url.pathname === '/api/supplies') {
       const body = await request.json().catch(() => null)
